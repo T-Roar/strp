@@ -1,0 +1,10 @@
+apiVersion: skaffold/v4beta4
+kind: Config
+metadata:
+  name: strapi-proj
+manifests:
+  rawYaml:
+    - PersistentVolume.yaml
+    - PersistentVolumeClaim.yaml
+    - deployment.yaml
+    - secret.yaml
