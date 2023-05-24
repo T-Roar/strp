@@ -1,10 +1,16 @@
 apiVersion: skaffold/v4beta4
 kind: Config
 metadata:
-  name: strapi-proj
+  name: triumph-proj
+build:
+  artifacts:
+    - image: strapi
+      docker:
+        dockerfile: Dockerfile
 manifests:
   rawYaml:
     - PersistentVolume.yaml
     - PersistentVolumeClaim.yaml
     - deployment.yaml
     - secret.yaml
+    - service.yaml
